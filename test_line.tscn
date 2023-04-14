@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmsc8gkq1rygh"]
+
+[ext_resource type="Script" path="res://test_line.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(223.607, 10)
+
+[node name="test_line" type="Area2D" groups=["test_line"]]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-64, 0, 64, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
